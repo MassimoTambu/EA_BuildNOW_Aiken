@@ -15,7 +15,7 @@
       "vscode": {
         // Add the IDs of extensions you want installed when the container is created.
         "extensions": [
-                "tx-pipe/aiken"
+          "tx-pipe.aiken"
           //    "haskell.haskell",
         //  "vigoo.stylish-haskell"
         ],
