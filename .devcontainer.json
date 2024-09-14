@@ -3,7 +3,7 @@
     // "build": {
     //  "dockerfile": "Dockerfile"
     // },
-    "image": "nanuijaz/cardano-node-preview:9.1.1",
+    "image": "nanuijaz/cardano-node-preview:9.1.1-withdb",
     //"dockerComposeFile": "docker-compose.yml",
     //"service": "ppp",
     "workspaceFolder": "/home/ubuntu",
