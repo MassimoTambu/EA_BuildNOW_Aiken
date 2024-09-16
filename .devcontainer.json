@@ -8,7 +8,7 @@
     "workspaceFolder": "/home/ubuntu",
     //"shutdownAction": "stopCompose",
     "mounts": [
-          "source=${localWorkspaceFolder},target=/home/ubuntu,type=bind,consistency=cached"
+          "source=/Users/massimotamburini/Desktop/work/aiken-course/forked-version/EA_BuildNOW_Aiken,target=/home/ubuntu,type=bind,consistency=cached"
       ],
     "shutdownAction": "none",
   
