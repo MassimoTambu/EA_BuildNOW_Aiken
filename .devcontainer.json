@@ -8,7 +8,9 @@
     //"service": "ppp",
     "workspaceFolder": "/home/ubuntu",
     //"shutdownAction": "stopCompose",
-  
+    "mounts": [
+          "source=${localWorkspaceFolder},target=/home/ubuntu,type=bind,consistency=cached"
+      ],
     // Configure tool-specific properties.
     "customizations": {
       // Configure properties specific to VS Code.
