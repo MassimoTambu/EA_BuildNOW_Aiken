@@ -14,12 +14,14 @@ test main_testset1() {
 // A function can contain a sequence of expressions. However, any expression but the last one must be assigned to a variable using the let keyword
 
 fn blocks() {
-  let x: Int =
-    // let a = 11 + 22             // Warning for unused identifier
-    // True                        // Implicity discarded
-    // let c = "Howdy"
-    33
-  x
+    let x: Int = {
+                    let a = 11
+                    //True
+                    let b = 22
+                    let c = a + b              // Warning for unused identifier
+                    c                       
+                 }
+    x
 }
 
 fn usual_suspect(a: Bool, x: Int, y: Int) -> Int {
@@ -33,45 +35,54 @@ fn usual_suspect(a: Bool, x: Int, y: Int) -> Int {
 // Pattern matching with `when *expression* is` 
 
 fn patterns(i_can_only_count_2_4 x: Int) -> Int {
-  when x is {
-    1 -> 5
-    2 -> 6
-    3 -> 7
-    4 -> 8
-    _ -> fail
-  }
+    when x is {
+        1 -> 5
+        2 -> 6
+        3 -> 7
+        4 -> 8
+        _ -> fail
+
+    }
+}  
+
+fn ooe_if(x: Int) -> ByteArray {
+    if x % 2 == 0 {
+        "Even"
+    } else {
+        "Odd"
+    }
 }
 
-fn even_or_odd_if_else(x: Int) -> Bool {
-  if x % 2 == 0 {
+fn ooe_wi(x: Int) -> ByteArray {
+    when x % 2 is {
+         0 -> "Even"
+         1 -> "Odd"
+         _ -> fail
+    }
+}
+
+fn payment_price(payment: Int, price: Int) -> Bool {
+  if payment >= price {
     True
   } else {
     False
   }
 }
 
-fn even_or_odd(x: Int) -> Bool {
-  when x % 2 is {
-    0 -> True
-    _ -> False
-  }
+test payment_price_test_set3() {
+    payment_price(100, 50) == True && payment_price(100, 150) == False
 }
 
-fn compare_two(payment: Int, price: Int) -> Bool {
-  payment >= price
+
+test ooe_wi_test_set2() {
+    ooe_wi(3) == "Odd" && ooe_wi(4) == "Even"     
 }
 
-test even_or_odd_if_else_test() {
-  even_or_odd_if_else(2) && even_or_odd_if_else(3) == False
+test ooe_if_test_set2() {
+    ooe_if(3) == "Odd" && ooe_if(4) == "Even"     
 }
 
-test even_or_odd_test() {
-  even_or_odd(2) && even_or_odd(3) == False
-}
 
-test compare_two_test() {
-  compare_two(10, 5) && compare_two(10, 10) == True && compare_two(10, 15) == False
-}
 
 test blocks_testset1() {
   blocks() == 33
