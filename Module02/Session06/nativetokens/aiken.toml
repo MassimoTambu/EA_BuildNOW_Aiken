@@ -1,13 +1,13 @@
-name = "eafaculty/functionalaiken"
+name = "rcerrud/nativetokens"
 version = "0.0.0"
 compiler = "v1.1.4"
 plutus = "v3"
 license = "Apache-2.0"
-description = "Aiken contracts for project 'eafaculty/functionalaiken'"
+description = "Aiken contracts for project 'rcerrud/nativetokens'"
 
 [repository]
-user = "eafaculty"
-project = "functionalaiken"
+user = "rcerrud"
+project = "nativetokens"
 platform = "github"
 
 [[dependencies]]

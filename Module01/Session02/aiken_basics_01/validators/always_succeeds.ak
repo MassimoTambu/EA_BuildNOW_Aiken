@@ -3,7 +3,7 @@ validator always_succeeds {
     _datum: Option<Data>,
     _redeemer: Data,
     _output_reference: Data,
-    _context: Data,
+    _transaction: Data,
   ) {
     True
   }
@@ -14,5 +14,5 @@ validator always_succeeds {
 }
 
 test always_successfull() {
-  always_succeeds.spend(None, 0, 0, 0) == True
+  always_succeeds.spend(None, 0, 0, 0)
 }

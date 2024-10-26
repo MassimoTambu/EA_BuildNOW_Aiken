@@ -14,3 +14,8 @@ Cargo.lock
 *.pdb
 *.lock
 *.lock
+*.addr
+*.lock
+*.signed
+*.unsigned
+*.uplc

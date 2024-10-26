@@ -1,4 +1,4 @@
-// Aiken is functional language, 
+//// Aiken is a functional language
 
 fn main() {
   let x = 5
@@ -7,7 +7,8 @@ fn main() {
   x + y + z
 }
 
-// Aiken compiler can infer the types of the arguments and the return type
+// ## Aiken compiler can infer the types of the arguments and the return type
+
 fn sum(x, y) {
   x + y
 }
@@ -16,35 +17,8 @@ fn sum_explicit(x: Int, y: Int) -> Int {
   x + y
 }
 
-fn sub(x: Int, y: Int) -> Int {
-  x - y
-}
+// ## Let's check that our functions work by testing them
 
-fn mul(x: Int, y: Int) -> Int {
-  x * y
-}
-
-fn div(x: Int, y: Int) -> Int {
-  x / y
-}
-
-test sub_test() {
-  sub(5, 3) == 2
-}
-
-test mul_test() {
-  mul(5, 3) == 15
-}
-
-test sub_mul_test() {
-  mul(sub(5, 3), 2) == 4
-}
-
-test div_test() {
-  div(6, 3) == 2
-}
-
-// Lets check that our functions work by testing them
 test main_test() {
   main() == 22
 }

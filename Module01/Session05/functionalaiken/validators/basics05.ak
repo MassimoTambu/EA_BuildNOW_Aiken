@@ -1,65 +1,61 @@
-// ## Constants and Types
+//// Constants and Types
 
 // ## Ints
 
-const pi: Int= 314159265359
+pub const pi: Int = 314159265359
 
-fn circleArea(radius: Int) -> Int {
-    pi * radius * radius
+pub fn circle_area(radius: Int) -> Int {
+  pi * radius * radius
 }
 
-fn circleCircumference(radius: Int) -> Int {
-    2 * pi * radius
+pub fn circle_circumference(radius: Int) -> Int {
+  2 * pi * radius
 }
 
 // ## Bools
 
-const failed_answer: Bool = False
+pub const failed_answer: Bool = False
 
-fn da_question(da_answer: Bool) -> Bool {
-    if da_answer {
-        True
-    } else {
-        failed_answer
-    }   
+pub fn da_question(da_answer: Bool) -> Bool {
+  if da_answer {
+    True
+  } else {
+    failed_answer
+  }
 }
 
 // ## ByteArray
 
-fn even_or_odd_if(x: Int) -> ByteArray {
-    if x % 2 == 0 {
-        "even"
-    } else {
-        "odd"
-    }
+pub fn even_or_odd_if(x: Int) -> ByteArray {
+  if x % 2 == 0 {
+    "even"
+  } else {
+    "odd"
+  }
 }
 
 // ## Lists
 
-const list_of_tokens = ["Sundae","Meld","Iagon","Minswap"] 
+pub const list_of_tokens = ["Sundae", "Meld", "Iagon", "Minswap"]
 
-const tokesn_n_ada = ["Ada", ..list_of_tokens]
-
+pub const tokesn_n_ada = ["Ada", ..list_of_tokens]
 
 // ## Tuples
 
-const my_mega_super_tuple = (1,"two",3)
-const just_a_tuple = (5,"six")
+pub const my_mega_super_tuple = (1, "two", 3)
+
+pub const just_a_tuple = (5, "six")
 
 // ## Pairs
 
-// const value = Pair("Sundae",100)
-
+// pub const value = Pair("Sundae", 100)
 
 // ## Tests
 
-
-
-
 test area_test_set4() {
-    circleArea(10) == 31415926535900
+  circle_area(10) == 31415926535900
 }
 
 test circumference_test_set4() {
-    circleCircumference(10) == 6283185307180
+  circle_circumference(10) == 6283185307180
 }

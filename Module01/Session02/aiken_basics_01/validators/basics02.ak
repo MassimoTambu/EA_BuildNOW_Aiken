@@ -1,38 +1,37 @@
-use aiken_basics_01/myfirstlib.{sum}
+use aiken_basics_01/my_first_lib.{sum}
 
-// Its good practice to be explicit about your types
+// ## It's a good practice to be explicit about your types!
 
-// We can use variables and other functions inside functions
+// ## We can use variables and other functions inside functions
+
 fn main(x: Int, y: Int) -> Int {
   let z = sum(x, y)
   x + y + z
 }
 
 fn subs(x, y) {
-    x - y
+  x - y
 }
 
 fn mult(x: Int, y: Int) -> Int {
-    x * y
-}   
+  x * y
+}
 
 fn divi(x: Int, y: Int) -> Int {
-    x / y
+  x / y
 }
-
-
 
 test subs_test() {
-    subs(5, 6) == -1
+  subs(5, 6) == -1
 }
+
 test mult_test() {
-    mult(5, 6) == 30
+  mult(5, 6) == 30
 }
 
 test divi_test() {
-    divi(5, 6) == 0
+  divi(5, 6) == 0
 }
-
 
 test sum_test() {
   sum(5, 6) == 11
