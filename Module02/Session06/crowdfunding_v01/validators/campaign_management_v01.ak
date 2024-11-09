@@ -5,7 +5,7 @@ use cardano/transaction.{OutputReference, Transaction}
 /// shorthand notation for custom types
 /// the full version would have the explicit Data Constructor like
 /// type Datum { Datum {...fields are the same...} }
-pub type CFdatum {
+pub type CFdatum = CFdatum {
   campaign_id: Int,
   title: ByteArray,
   goal: Int,
@@ -81,6 +81,8 @@ fn cancel_campaign(
     signatories,
   )
 }
+
+
 
 /// Update conditions
 ///    Datum.campaignId == Redeemer.campaignId
